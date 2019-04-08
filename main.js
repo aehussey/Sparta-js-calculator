@@ -5,7 +5,18 @@
 var calculatorType = prompt("What Kind of calculator would you like to use, (a)dvanced or (b)asic?")
 
 if (calculatorType.toLowerCase() == "a" || calculatorType.toLowerCase() == "advanced") {
-  // Advanced Calculator
+  var calculationType = prompt("Would you like to use the 'power' or 'square root' feature");
+
+    if (calculationType.toLowerCase() == "power") {
+      var raise = prompt("What number would you like to have raised");
+      var power = prompt("And what power would you like that to be raised to?");
+      alert(parseInt(raise) ** parseInt(power));
+    }
+    else {
+      var sqrt = prompt("What number would you like to have square rooted?");
+
+      alert(Math.sqrt(parseInt(sqrt)));
+    }
 
 }
 
