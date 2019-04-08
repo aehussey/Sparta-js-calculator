@@ -32,7 +32,7 @@ else if (calculatorType.toLowerCase() == "b" || calculatorType.toLowerCase() == 
 // BMI Calculator
 
 else if (calculatorType.toLowerCase() == "bmi" || calculatorType.toLowerCase() == "bmi calculator") {
-  var measurementSystem = prompt("Would you like to use the Metric or Imperial system")
+  var measurementSystem = prompt("Would you like to use the Metric or Imperial system?")
 
   if (measurementSystem.toLowerCase() == "imperial") {
     var weightPounds = prompt("What is your weight in Pounds?");
