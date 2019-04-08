@@ -2,7 +2,7 @@
 //Prompt "What Numbers please?"
 // Alert Answer
 
-var calculatorType = prompt("What Kind of calculator would you like to use, (a)dvanced or (b)asic?")
+var calculatorType = prompt("What Kind of calculator would you like to use, (a)dvanced, (b)asic? or the BMI Calculator")
 
 if (calculatorType.toLowerCase() == "a" || calculatorType.toLowerCase() == "advanced") {
   var calculationType = prompt("Would you like to use the 'power' or 'square root' feature");
@@ -22,7 +22,7 @@ if (calculatorType.toLowerCase() == "a" || calculatorType.toLowerCase() == "adva
 
 else if (calculatorType.toLowerCase() == "b" || calculatorType.toLowerCase() == "basic") {
   // Basic Calculator
-  var equation = prompt("Please input your equation");
+  var equation = prompt("Please input your equation. (Use * for multiplication)");
   alert(eval(equation));
 
 }
@@ -30,3 +30,18 @@ else if (calculatorType.toLowerCase() == "b" || calculatorType.toLowerCase() == 
 
 
 // BMI calculator
+
+else if (calculatorType.toLowerCase() == "bmi" || calculatorType.toLowerCase() == "bmi calculator") {
+  var measurementSystem = prompt("Would you like to use the Metric or Imperial system")
+
+  if (measurementSystem.toLowerCase() == "imperial") {
+    var weightPounds = prompt("What is your weight in Pounds?");
+    var heightInches = prompt("What is your height in Inches?");
+    alert("Your BMI is " + (parseInt(weightPounds)/(parseInt(heightInches)*parseInt(heightInches)))*703);
+  }
+
+  else {
+    var weightKilos = prompt("What is your weight in Kilos?");
+    var heightMeters = prompt("What is your height in Meters?");
+    alert("Your BMI is " + (parseInt(weightKilos)/(parseInt(heightMeters)*parseInt(heightMeters))));}
+}
